@@ -295,6 +295,11 @@ justify-content: end;
 
     }
 
+     .dropdown{
+       visibility: hidden;
+       margin-left: -2em;
+    }
+
 }
 /* DARKMODE COMEÇO*/
 
