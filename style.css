@@ -1,0 +1,787 @@
+
+@charset "utf-8";
+
+@font-face {
+    font-family: fonte1;
+    src: url(Breathney\ Demo.ttf);
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width: 15px;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--amarelo);
+    border-radius: 2em;
+}
+
+
+/* ROOT CORES */
+
+:root {
+    --amarelo: #f2b90c;
+    --amarelo-dark: #d9910b;
+    --amarelo-claro: #f2d272;
+    --cinza: rgb(53, 52, 52);
+}
+
+
+/* formatação padrao */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+
+
+/* CORPO */
+body{
+    background-color: white;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*---------LOGO NAVBAR ----------  */
+
+.logo-img img{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    margin-left: -35%;
+    border-radius: 30%;
+    box-shadow: 0 10px 30px var(--amarelo-dark);
+    z-index: 1;
+    top: 1em;
+    transition: all .5s ease-in-out;
+    background-color: white;
+}
+
+.logo-img img:hover{
+    width: 170px;
+
+}
+
+
+/* CABEÇALHO NAVBAR*/
+
+header{
+    display: flex;
+    justify-content: end;
+    background: linear-gradient(90deg, var(--amarelo), var(--amarelo-dark) );
+    padding: 2em;
+    border-radius: 0 0 2em 2em;
+    text-align: center;
+    box-shadow: 0 0 20px var(--amarelo-claro);
+    padding: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    align-items: center;
+    z-index: 9;
+}
+.navbar a {
+    position: relative;
+    margin-left: 2em;
+    font-size: 1em;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+    transition: all .5s ease-in-out;
+}
+
+.navbar a:hover{
+   color: var(--amarelo-claro);
+}
+
+/* ANIMAÇÃO NAVBAR TEXTO */
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* FIM ANIMAÇÃO NAVBAR TEXTO */
+/* --------FINAL BOTÃO NAVBAR */
+
+/* -----drop down----- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+  .dropdown-toggle {
+    background-color:  #d9910b; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* Cor de fundo do menu */
+    border: 1px solid rgb(255, 255, 255); /* Cor da borda do menu */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra do menu */
+    border-radius: 4px;
+    margin-top: 5px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    width: 200px; /* Largura do menu */
+  }
+  
+  .dropdown-menu.show {
+    display: block; /* Mostra o menu quando a classe 'show' é adicionada */
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #212529; /* Cor do texto dos itens */
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgb(245, 243, 235); /* Cor de fundo ao passar o mouse */
+    color: #888602; /* Cor do texto ao passar o mouse */
+  }
+
+
+/* MENU MOBILE */
+
+.menu-mobile{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+
+    /* margin-left: 4em; */
+}
+
+
+
+/* CONFIG MENU ABRIR */
+.menu-mobile.abrir-menu{
+width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+/* ANIMAÇÃO NAVBAR TEXTO */
+
+.menu-mobile nav a{
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 20px 10%;
+    display: block;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.menu-mobile nav a:hover{
+    background-color: var(--amarelo-claro);
+    color: black;
+}
+
+/* BOTAO DE FECHAR O MOBILE */
+
+.menu-mobile .btn-fechar{
+    padding: 10px 4%;
+}
+
+.menu-mobile .btn-fechar i{
+color: var(--amarelo-claro);
+font-size: 2.5em;
+cursor: pointer;
+transition: all .5s;
+display: flex;
+justify-content: end;
+}
+
+.menu-mobile .btn-fechar i:hover{
+    color: red;
+}
+
+/* BOTAO ABRIR MENU */
+.btn-abrir-menu i{
+    color: white;
+    font-size: 40px;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all .5s;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    
+}
+
+.btn-abrir-menu i:hover{
+    color: black;
+}
+
+
+/* <----REFORÇO */
+
+ .reforco{
+    font-family: sans-serif;
+
+    columns: 3;
+    
+
+    font-size: 25px;
+    border: solid 1px  #d9910b;
+    box-shadow: 0 0 10px #d9910b;
+
+    margin-left: 10px ;
+    padding-left: 10px;
+
+ }
+.dark-mode .reforco{
+    color: white;
+}
+
+.titulozinho{
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+.dark-mode .titulozinho{
+    color: white;
+}
+
+.hh{
+    margin: 1em;
+}
+
+.pp{
+    font-family: sans-serif;
+}
+
+span{
+    color: #d9910b;
+}
+
+ /* <-----responsivo reforço-----> */
+
+
+@media screen and (max-width: 768px) {
+    .reforco {
+        columns: 1; 
+        margin-left: 6px;
+        margin-right: 6px;
+
+        padding-left: 8px;
+    }
+
+    .titulozinho {
+        font-size: 2em;
+    }
+
+    .dropdown{
+       visibility: hidden;
+       margin-left: -2em;
+    }
+}
+
+/* <-----------------------------> */
+
+
+
+/* OVERLAY MENU */
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* FIM MOBILE */
+
+
+/* FORMATAÇAÕ SITE MOBILE */
+
+@media screen and (max-width: 1020px) {
+
+    /* MENU MOBILE */
+    .navbar{
+        display: none;
+    }
+
+    .btn-abrir-menu i{
+        color: white;
+        font-size: 40px;
+        visibility: visible;
+        display: flex;
+        justify-content: end;
+        text-align: end;
+    
+    }
+
+    /* LOGO */
+    .logo-img img{
+        width: 35%;
+        /* margin-left: -60%; */
+    }
+
+    .logo-img img:hover{
+        width: 40%;
+
+    }
+}
+
+
+/* DARKMODE COMEÇO*/
+
+.dark-mode{
+    background-color: black;
+    transition: all .5s ease;
+}
+
+.dark-mode .logo-img img{
+    background-color: black;
+}
+
+.dark-mode .titulo-imp{
+    color: white;
+}
+
+.dark-mode .texto-imp{
+    color: white;
+}
+
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section{
+    top: 0;
+    left: 1;
+}
+
+.darkmode label{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+    
+}
+
+/* ------------icones---------- */
+#sun{
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.644));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon{
+    font-size: 2em;
+    color: var(--cinza);
+    filter: drop-shadow(0 0 2px rgba(0, 0 ,0, .5));
+    transition: 1s ease;
+
+}
+
+.darkmode input:checked~#moon{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+/*--------final icones------------- */
+
+.toggle{
+    margin-left: -25%;
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    /* background: #2b2b2b; */
+    border-radius: 50%;
+    z-index: -1;
+    transition: 1s;
+}
+
+
+/* DARKMODE FORMATAÇÃO FIM*/
+
+/* PARALLAX */
+
+.wrapper{
+    width: 100%;
+    margin: 0;
+    margin: auto;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section.modulo p{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 2em;
+
+}
+
+section.modulo h2{
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-align: center;
+}
+
+section.modulo span{
+   color: white;
+   text-shadow: 0 0 10px black;
+}
+
+
+
+section.modulo.content{
+    padding: 40px 0;
+    background: var(--amarelo);
+
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: rgb(255, 187, 0);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 3em;
+    font-family: fonte1;
+    z-index: 50;
+
+}
+
+section.modulo.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8; 
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, var(--amarelo)) ;
+    
+    }
+
+    section.modulo.parallax-1{
+        
+        background-image: url(https://website.cfo.org.br/wp-content/uploads/2023/09/set.amarelo-site-1024x576.jpg);
+    }
+
+ section.modulo.parallax-2{
+        
+        background-image: url(https://eventos.oabmaringa.org.br/wp-content/uploads/2024/08/setembro-amarelo-2024-oab-site.jpg);
+    }
+
+
+/* TEXTOS IMOPRTANCIA */
+
+    .titulo-imp{
+        margin-top: 3em;
+        font-size: 1.6em;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .texto-imp{
+        font-family: sans-serif;
+        text-align: center;
+        margin: 1em;
+        font-size: 1.5em;
+    }
+
+    .texto-imp span{
+        color: var(--amarelo);   
+}
+
+   
+    /* Parallax Importancia */
+
+    .items {
+        display: flex; /* Usando flexbox para dispor os itens lado a lado */
+        justify-content: space-around; /* Espaço entre os itens */
+        flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo em telas menores */
+    }
+    .item {
+        margin: 20px; /* Espaçamento entre os itens */
+        text-align: center; /* Centraliza o texto */
+    }
+    .icon {
+    
+        color: #f2dc99;
+        font-size: 50px; /* Tamanho dos ícones */
+        margin-bottom: 10px; /* Espaçamento abaixo dos ícones */
+    }
+    .responsive-img {
+        width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    @media (max-width: 768px) {
+        .modulo.parallax {
+            height: 70vh; /* Ajuste a altura para dispositivos móveis */
+        }
+        .icon {
+            font-size: 40px; /* Tamanho dos ícones em dispositivos móveis */
+        }
+    }
+
+
+    /* TEXTOS IMOPRTANCIA */
+
+    .titulo-imp{
+        margin-top: 3em;
+        font-size: 1.6em;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .texto-imp{
+        font-family: sans-serif;
+        text-align: center;
+        margin: 1em;
+        font-size: 1.5em;
+    }
+
+    .texto-imp span{
+        color: var(--amarelo);   
+}
+
+footer {
+    padding: 15px 7%;
+    box-shadow: 0 0 50px #fff;
+}
+
+.titulos-footer h2 {
+    font-family: fonte1;
+    margin-left: 18%;
+    font-size: 30px;
+}
+
+.titulos-footer h3 {
+    margin-left: 28%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: -22px;
+    font-size: 35px;
+}
+
+.titulos-footer h4 {
+    margin-left: 32%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: -15px;
+    font-size: 35px;
+}
+
+.logo-footer img {
+    height: 220px;
+    width: 220px;
+    margin-left: 130px;
+    margin-top: -140px;
+}
+
+.setembro h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 8px 25px;
+}
+
+.dark-mode .setembro h2{
+    border: solid 2px #fff;
+    background-color: #000;
+    color: #fff;
+}
+
+.setembro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.significado h2{
+    background-color: #4e4e4e;
+    color: #fff;
+    border-radius: 20px 20px 5px 20px;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.significado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sobre-setembro{
+    background-color: #f2b90c;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.sobre-setembro p{
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px
+}
+
+.precisar{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.precisar h2{
+    font-size: 16px;
+}
+
+.precisar p{
+    font-size: 18px;
+}
+
+.precisar h3{
+    font-size: 13px;
+}
+
+.dark-mode .precisar{
+    color: #fff;
+}
+
+.desenvolvedores{
+    font-family: "Poppins", sans-serif;
+    padding: 10px 0;
+}
+
+.desenvolvedores h2{
+    font-size: 18px;
+}
+
+.desenvolvedores p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.desenvolvedores a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
+
+.logo-pao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.dark-mode .titulos-footer {
+    color: #fff;
+}
+
+.dark-mode .desenvolvedores{
+    color: #fff;
+}
+
+.dark-mode .desenvolvedores h2{
+    color: #fff;
+}
+
+
+
+
