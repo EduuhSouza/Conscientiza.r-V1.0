@@ -310,11 +310,11 @@ display: none;
 /* LOGO */
 .logo-img img{
     width: 35%;
-    /* margin-left: -60%; */
+    margin-left: -35%;
 }
 
 .logo-img img:hover{
-    width: 40%;
+    width: 30%;
 
 }
 
