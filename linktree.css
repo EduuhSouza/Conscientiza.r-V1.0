@@ -196,6 +196,68 @@ justify-content: end;
 }
 
 
+
+
+/* -----drop down----- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+  .dropdown-toggle {
+    background-color:  #d9910b; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* Cor de fundo do menu */
+    border: 1px solid rgb(255, 255, 255); /* Cor da borda do menu */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra do menu */
+    border-radius: 4px;
+    margin-top: 5px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    width: 200px; /* Largura do menu */
+  }
+  
+  .dropdown-menu.show {
+    display: block; /* Mostra o menu quando a classe 'show' é adicionada */
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #212529; /* Cor do texto dos itens */
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgb(245, 243, 235); /* Cor de fundo ao passar o mouse */
+    color: #888602; /* Cor do texto ao passar o mouse */
+  }
+
+
+
+
 /* OVERLAY MENU */
 
 .overlay-menu{
@@ -231,6 +293,11 @@ justify-content: end;
     
     }
 
+    .dropdown{
+        visibility: hidden;
+        margin-left: -2em;
+     }
+
     /* LOGO */
     .logo-img img{
         width: 35%;
@@ -240,11 +307,6 @@ justify-content: end;
     .logo-img img:hover{
         width: 40%;
 
-    }
-    
-     .dropdown{
-       visibility: hidden;
-       margin-left: -2em;
     }
 }
 
