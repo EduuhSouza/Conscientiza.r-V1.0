@@ -51,10 +51,9 @@ html {
 
 
 .logo-img img{
-    width: 150px;
-    height: 150px;
+    width: 10%;
     position: absolute;
-    margin-left: -35%;
+    margin-left: -50%;
     border-radius: 30%;
     box-shadow: 0 10px 30px var(--amarelo-dark);
     z-index: 1;
@@ -64,8 +63,7 @@ html {
 }
 
 .logo-img img:hover{
-    width: 170px;
-
+    width: 20%;
 }
 
 
