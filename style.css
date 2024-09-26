@@ -1,10 +1,4 @@
-
 @charset "utf-8";
-
-@font-face {
-    font-family: fonte1;
-    src: url(Breathney\ Demo.ttf);
-}
 
 
 /* SCROLLBAR */
@@ -49,24 +43,27 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /*---------LOGO NAVBAR ----------  */
 
+
 .logo-img img{
-    width: 10%;
-    position: absolute;
-    margin-left: -50%;
-    border-radius: 30%;
-    box-shadow: 0 10px 30px var(--amarelo-dark);
-    z-index: 1;
-    top: 1em;
-    transition: all .5s ease-in-out;
-    background-color: white;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        margin-left: -45%;
+        border-radius: 30%;
+        box-shadow: 0 10px 30px var(--amarelo-dark);
+        z-index: 1;
+        top: 1em;
+        transition: all .5s ease-in-out;
+        background-color: white;
+    }
+    
+.logo-img img:hover{
+        width: 170px;
+    
 }
 
-.logo-img img:hover{
-    width: 20%;
-}
 
 /* CABEÇALHO NAVBAR*/
 
@@ -123,63 +120,6 @@ header{
 /* FIM ANIMAÇÃO NAVBAR TEXTO */
 /* --------FINAL BOTÃO NAVBAR */
 
-/* -----drop down----- */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 1em;
-  }
-  
-  .dropdown-toggle {
-    background-color:  #d9910b; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .dropdown-toggle:hover {
-    background-color: #000000; /* Cor de fundo ao passar o mouse */
-  }
-  
-  .dropdown-menu {
-    display: none; /* Inicialmente escondido */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff; /* Cor de fundo do menu */
-    border: 1px solid rgb(255, 255, 255); /* Cor da borda do menu */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra do menu */
-    border-radius: 4px;
-    margin-top: 5px;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-    width: 200px; /* Largura do menu */
-  }
-  
-  .dropdown-menu.show {
-    display: block; /* Mostra o menu quando a classe 'show' é adicionada */
-  }
-  
-  .dropdown-item {
-    display: block;
-    padding: 10px 15px;
-    color: #212529; /* Cor do texto dos itens */
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .dropdown-item:hover {
-    background-color: rgb(245, 243, 235); /* Cor de fundo ao passar o mouse */
-    color: #888602; /* Cor do texto ao passar o mouse */
-  }
-
 
 /* MENU MOBILE */
 
@@ -193,8 +133,6 @@ header{
     width: 0%;
     overflow: hidden;
     transition: .5s;
-
-    /* margin-left: 4em; */
 }
 
 
@@ -255,7 +193,6 @@ justify-content: end;
     display: flex;
     justify-content: end;
     text-align: end;
-    
 }
 
 .btn-abrir-menu i:hover{
@@ -271,13 +208,8 @@ justify-content: end;
     columns: 3;
     
 
-    font-size: 25px;
     border: solid 1px  #d9910b;
     box-shadow: 0 0 10px #d9910b;
-
-    margin-left: 10px ;
-    padding-left: 10px;
-
  }
 .dark-mode .reforco{
     color: white;
@@ -298,6 +230,7 @@ justify-content: end;
 
 .pp{
     font-family: sans-serif;
+  
 }
 
 span{
@@ -306,23 +239,14 @@ span{
 
  /* <-----responsivo reforço-----> */
 
-
+/* Responsividade para telas menores (como celulares) */
 @media screen and (max-width: 768px) {
     .reforco {
-        columns: 1; 
-        margin-left: 6px;
-        margin-right: 6px;
-
-        padding-left: 8px;
+        columns: 1; /* Coloca os elementos em uma única coluna */
     }
 
     .titulozinho {
-        font-size: 2em;
-    }
-
-    .dropdown{
-       visibility: hidden;
-       margin-left: -2em;
+        font-size: 2em; /* Ajuste do tamanho do texto para se adequar a telas menores */
     }
 }
 
@@ -366,14 +290,13 @@ span{
     }
 
     /* LOGO */
-  /* LOGO */
-.logo-img img{
-    width: 35%;
-    margin-left: -35%;
-}
+    .logo-img img{
+        width: 35%;
+        /* margin-left: -60%; */
+    }
 
     .logo-img img:hover{
-        width: 30%;
+        width: 40%;
 
     }
 }
@@ -404,6 +327,7 @@ span{
 section{
     top: 0;
     left: 1;
+
 }
 
 .darkmode label{
@@ -629,6 +553,16 @@ section.modulo.parallax:after{
     .texto-imp span{
         color: var(--amarelo);   
 }
+
+/* VIDEO */
+
+.video{
+    margin-top: 2em;
+    margin-bottom: 5em;
+    text-align: center;
+    font-size: 3em;
+}
+
 
 footer {
     padding: 15px 7%;
