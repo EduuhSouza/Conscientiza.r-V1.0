@@ -17,23 +17,3 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-  
-    dropdownToggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      dropdownMenu.classList.toggle('show');
-    });
-  
-    document.addEventListener('click', () => {
-      if (dropdownMenu.classList.contains('show')) {
-        dropdownMenu.classList.remove('show');
-      }
-    });
-  });
-  

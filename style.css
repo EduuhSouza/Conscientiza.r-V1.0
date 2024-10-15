@@ -1,8 +1,11 @@
 @charset "utf-8";
+
 @font-face {
     font-family: fonte1;
     src: url(Breathney\ Demo.ttf);
 }
+
+
 
 /* SCROLLBAR */
 
@@ -20,10 +23,9 @@
 /* ROOT CORES */
 
 :root {
-    --amarelo: #f2b90c;
-    --amarelo-dark: #d9910b;
-    --amarelo-claro: #f2d272;
-    --cinza: rgb(53, 52, 52);
+    --amarelo: #e49424;
+    --rosa: #bf2a70;
+    --azul: #0070b8;
 }
 
 
@@ -35,12 +37,6 @@
     font-family: "Asap", sans-serif;
 }
 
-
-/* CORPO */
-body{
-    background-color: white;
-}
-
 /* Rolagem suave */
 html {
     scroll-behavior: smooth;
@@ -48,132 +44,76 @@ html {
 
 /*---------LOGO NAVBAR ----------  */
 
-
 .logo-img img{
-    width: 10%;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    margin-left: -50%;
+    margin-left: -52%;
     border-radius: 30%;
-    box-shadow: 0 10px 30px var(--amarelo-dark);
+    box-shadow: 0 10px 30px var(--rosa);
     z-index: 1;
     top: 1em;
     transition: all .5s ease-in-out;
     background-color: white;
 }
-    
+
 .logo-img img:hover{
-          width: 20%;
-    
+    width: 170px;
+
 }
 
 
 /* CABEÇALHO NAVBAR*/
 
-/* -----drop down----- */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 1em;
-  }
-  
-  .dropdown-toggle {
-    background-color:  #d9910b; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .dropdown-toggle:hover {
-    background-color: #000000; /* Cor de fundo ao passar o mouse */
-  }
-  
-  .dropdown-menu {
-    display: none; /* Inicialmente escondido */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff; /* Cor de fundo do menu */
-    border: 1px solid rgb(255, 255, 255); /* Cor da borda do menu */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra do menu */
-    border-radius: 4px;
-    margin-top: 5px;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-    width: 200px; /* Largura do menu */
-  }
-  
-  .dropdown-menu.show {
-    display: block; /* Mostra o menu quando a classe 'show' é adicionada */
-  }
-  
-  .dropdown-item {
-    display: block;
-    padding: 10px 15px;
-    color: #212529; /* Cor do texto dos itens */
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .dropdown-item:hover {
-    background-color: rgb(245, 243, 235); /* Cor de fundo ao passar o mouse */
-    color: #888602; /* Cor do texto ao passar o mouse */
-  }
-
-
 header{
-    display: flex;
-    justify-content: end;
-    background: linear-gradient(90deg, var(--amarelo), var(--amarelo-dark) );
-    padding: 2em;
-    border-radius: 0 0 2em 2em;
-    text-align: center;
-    box-shadow: 0 0 20px var(--amarelo-claro);
-    padding: 1.5em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    align-items: center;
-    z-index: 9;
+display: flex;
+justify-content: end;
+background-color: rgba(255, 255, 255, 0.479);
+padding: 2em;
+border-radius: 0 0 2em 2em;
+text-align: center;
+box-shadow: 0 0 20px var(--amarelo);
+padding: 1.5em;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+align-items: center;
+z-index: 9;
 }
+
 .navbar a {
-    position: relative;
-    margin-left: 2em;
-    font-size: 1em;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: white;
-    text-shadow: 0 0 10px black;
-    transition: all .5s ease-in-out;
+position: relative;
+margin-left: 2em;
+font-size: 1em;
+font-family: sans-serif;
+text-decoration: none;
+color: black;
+text-shadow: 0 0 10px var(--rosa);
+transition: all .5s ease-in-out;
 }
 
 .navbar a:hover{
-   color: var(--amarelo-claro);
+color: var(--amarelo);
 }
 
 /* ANIMAÇÃO NAVBAR TEXTO */
 
 .navbar a::after {
-    content: "";
-    width: 0%;
-    height: 1px;
-    background-color: white;
-    box-shadow: 0 0 10px white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: .5s ease-in-out;
+content: "";
+width: 0%;
+height: 1px;
+background-color: white;
+box-shadow: 0 0 10px white;
+position: absolute;
+bottom: 0;
+left: 0;
+transition: .5s ease-in-out;
 }
 
 .navbar a:hover::after {
-    width: 100%;
+width: 100%;
 }
 
 /* FIM ANIMAÇÃO NAVBAR TEXTO */
@@ -183,15 +123,15 @@ header{
 /* MENU MOBILE */
 
 .menu-mobile{
-    background-color: black;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
+background-color: black;
+height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 99999;
+width: 0%;
+overflow: hidden;
+transition: .5s;
 }
 
 
@@ -202,35 +142,36 @@ width: 70%;
 }
 
 .menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block;
+display: block;
 }
 
 
 /* ANIMAÇÃO NAVBAR TEXTO */
 
 .menu-mobile nav a{
-    text-align: right;
-    text-decoration: none;
-    font-size: 1.8em;
-    padding: 20px 10%;
-    display: block;
-    color: white;
-    transition: all .5s ease-in-out;
+text-align: right;
+text-decoration: none;
+font-size: 1.8em;
+padding: 20px 10%;
+display: block;
+color: white;
+transition: all .5s ease-in-out;
 }
 
 .menu-mobile nav a:hover{
-    background-color: var(--amarelo-claro);
-    color: black;
+background-color: var(--rosa);
+color: black;
 }
+
 
 /* BOTAO DE FECHAR O MOBILE */
 
 .menu-mobile .btn-fechar{
-    padding: 10px 4%;
+padding: 10px 4%;
 }
 
 .menu-mobile .btn-fechar i{
-color: var(--amarelo-claro);
+color: var(--amarelo);
 font-size: 2.5em;
 cursor: pointer;
 transition: all .5s;
@@ -239,87 +180,24 @@ justify-content: end;
 }
 
 .menu-mobile .btn-fechar i:hover{
-    color: red;
+color: red;
 }
 
 /* BOTAO ABRIR MENU */
 .btn-abrir-menu i{
-    color: white;
-    font-size: 40px;
-    visibility: hidden;
-    cursor: pointer;
-    transition: all .5s;
-    display: flex;
-    justify-content: end;
-    text-align: end;
+color: white;
+font-size: 40px;
+visibility: hidden;
+cursor: pointer;
+transition: all .5s;
+display: flex;
+justify-content: end;
+text-align: end;
 }
 
 .btn-abrir-menu i:hover{
-    color: black;
+color: black;
 }
-
-
-/* <----REFORÇO */
-
- .reforco{
-    font-family: sans-serif;
-
-    columns: 3;
-    
-
-    border: solid 1px  #d9910b;
-    box-shadow: 0 0 10px #d9910b;
- }
-.dark-mode .reforco{
-    color: white;
-}
-
-.titulozinho{
-    text-align: center;
-    font-size: 3em;
-    font-family: sans-serif;
-}
-.dark-mode .titulozinho{
-    color: white;
-}
-
-.hh{
-    margin: 1em;
-}
-
-.pp{
-    font-family: sans-serif;
-  
-}
-
-span{
-    color: #d9910b;
-}
-
- /* <-----responsivo reforço-----> */
-
-/* Responsividade para telas menores (como celulares) */
-@media screen and (max-width: 768px) {
-    .reforco {
-        columns: 1; /* Coloca os elementos em uma única coluna */ 
-        margin-left: 6px;
-        margin-right: 6px;
-        padding-left: 8px;
-    }
-
-    .titulozinho {
-        font-size: 2em; /* Ajuste do tamanho do texto para se adequar a telas menores */
-    }
-
-      .dropdown{
-       visibility: hidden;
-       margin-left: -2em;
-}
-}
-
-/* <-----------------------------> */
-
-
 
 /* OVERLAY MENU */
 
@@ -334,11 +212,6 @@ span{
     display: none;
 }
 
-/* FIM MOBILE */
-
-
-/* FORMATAÇAÕ SITE MOBILE */
-
 @media screen and (max-width: 1020px) {
 
     /* MENU MOBILE */
@@ -347,7 +220,7 @@ span{
     }
 
     .btn-abrir-menu i{
-        color: white;
+        color: black;
         font-size: 40px;
         visibility: visible;
         display: flex;
@@ -355,21 +228,7 @@ span{
         text-align: end;
     
     }
-
-    /* LOGO */
-    .logo-img img{
-      
-    width: 35%;
-    margin-left: -35%;
-        /* margin-left: -60%; */
-    }
-
-    .logo-img img:hover{
-         width: 30%;
-
-    }
 }
-
 
 /* DARKMODE COMEÇO*/
 
@@ -381,15 +240,6 @@ span{
 .dark-mode .logo-img img{
     background-color: black;
 }
-
-.dark-mode .titulo-imp{
-    color: white;
-}
-
-.dark-mode .texto-imp{
-    color: white;
-}
-
 
 
 /* FORMATAÇÃO BOTAO DARKMODE */
@@ -479,12 +329,26 @@ section{
     font-family: sans-serif;
 }
 
+.container .span1{
+    color: var(--amarelo);
+}
+
+.container .span2{
+    color: var(--rosa);
+}
+
+.container .span3{
+    color: var(--azul);
+}
+
 section.modulo p{
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.5em;
     margin: 2em;
-
+    border-left: solid var(--rosa);
+    border-bottom: solid var(--amarelo);
+   padding: .5em;
 }
 
 section.modulo h2{
@@ -493,16 +357,9 @@ section.modulo h2{
     text-align: center;
 }
 
-section.modulo span{
-   color: white;
-   text-shadow: 0 0 10px black;
-}
-
-
-
 section.modulo.content{
     padding: 40px 0;
-    background: var(--amarelo);
+    background: white;
 
 }
 
@@ -536,253 +393,153 @@ section.modulo.parallax:after{
     width: 100%;
     z-index: 8; 
     position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, white) ;
+    
+    }
+
+
+section.modulo.parallax-2:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8; 
+    position: absolute;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, var(--amarelo)) ;
+    
+    }
+
+
+section.modulo.parallax-3:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8; 
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, var(--rosa)) ;
     
     }
 
     section.modulo.parallax-1{
         
-        background-image: url(https://website.cfo.org.br/wp-content/uploads/2023/09/set.amarelo-site-1024x576.jpg);
+        background-image: url(imgs.background/parallax.background.jpg);
     }
+
+
+    /* SETEMBRO AMARELO */
 
  section.modulo.parallax-2{
         
-        background-image: url(https://eventos.oabmaringa.org.br/wp-content/uploads/2024/08/setembro-amarelo-2024-oab-site.jpg);
+        background-image: url(imgs.background/setembro.amarelo.parallax.jpg);
+    }
+
+ section.modulo.parallax-3{
+        
+        background-image: url(imgs.background/outubro.rosa.background.jpg);
+    }
+
+ section.modulo.parallax-4{
+        
+        background-image: url(imgs.background/novembro.azul.background.jpg);
     }
 
 
-/* TEXTOS IMOPRTANCIA */
 
-    .titulo-imp{
-        margin-top: 3em;
-        font-size: 1.6em;
-        text-align: center;
-        font-family: sans-serif;
-    }
+    /* TITULO E TEXTO DOS SITES  */
 
-    .texto-imp{
-        font-family: sans-serif;
-        text-align: center;
-        margin: 1em;
-        font-size: 1.5em;
-    }
+    /* SETEMBRO AMARELO */
 
-    .texto-imp span{
-        color: var(--amarelo);   
+.set{
+    color: var(--amarelo);
 }
 
-   
-    /* Parallax Importancia */
-
-    .items {
-        display: flex; /* Usando flexbox para dispor os itens lado a lado */
-        justify-content: space-around; /* Espaço entre os itens */
-        flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo em telas menores */
-    }
-    .item {
-        margin: 20px; /* Espaçamento entre os itens */
-        text-align: center; /* Centraliza o texto */
-    }
-    .icon {
-    
-        color: #f2dc99;
-        font-size: 50px; /* Tamanho dos ícones */
-        margin-bottom: 10px; /* Espaçamento abaixo dos ícones */
-    }
-    .responsive-img {
-        width: 100%; /* A imagem ocupa 100% da largura do contêiner */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-    @media (max-width: 768px) {
-        .modulo.parallax {
-            height: 70vh; /* Ajuste a altura para dispositivos móveis */
-        }
-        .icon {
-            font-size: 40px; /* Tamanho dos ícones em dispositivos móveis */
-        }
-    }
-
-
-    /* TEXTOS IMOPRTANCIA */
-
-    .titulo-imp{
-        margin-top: 3em;
-        font-size: 1.6em;
+    .container-texto{
         text-align: center;
-        font-family: sans-serif;
+        margin-top: 5em;
+        border-top: solid var(--amarelo);
+        padding: 1em;
     }
 
-    .texto-imp{
-        font-family: sans-serif;
-        text-align: center;
+    .container-texto h2{
+        font-size: 2em;
+    }
+
+    .container-texto p{
+        margin-top: 1em;
         margin: 1em;
-        font-size: 1.5em;
+        font-size: 1.3em;
+        font-family: sans-serif;
     }
 
-    .texto-imp span{
-        color: var(--amarelo);   
+    /* SITE */
+
+.img-site img{
+    width: 80%;
 }
 
-/* VIDEO */
+.background-geral{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--amarelo);
+}
 
-.video{
+.texto p{
     margin-top: 2em;
-    margin-bottom: 5em;
+    font-size: 1.5em;
+}
+
+/* icone */
+
+.icone-site{
     text-align: center;
+    margin-top: 2em;
+}
+
+.icone-site i{
     font-size: 3em;
+    color: black;
+    transition: all .3s ease-in-out;
 }
 
-
-footer {
-    padding: 15px 7%;
-    box-shadow: 0 0 50px #fff;
+.icone-site i:hover{
+    font-size: 3em;
+    color: black;
+    text-shadow: 0 0 10px white;
 }
 
-.titulos-footer h2 {
-    font-family: fonte1;
-    margin-left: 18%;
-    font-size: 30px;
-}
-
-.titulos-footer h3 {
-    margin-left: 28%;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: -22px;
-    font-size: 35px;
-}
-
-.titulos-footer h4 {
-    margin-left: 32%;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: -15px;
-    font-size: 35px;
-}
-
-.logo-footer img {
-    height: 220px;
-    width: 220px;
-    margin-left: 130px;
-    margin-top: -140px;
-}
-
-.setembro h2 {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 20px;
-    padding: 8px 25px;
-}
-
-.dark-mode .setembro h2{
-    border: solid 2px #fff;
-    background-color: #000;
-    color: #fff;
-}
-
-.setembro {
+.icone-site a{
+    color: black;
+    font-size: 1.2em;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.significado h2{
-    background-color: #4e4e4e;
-    color: #fff;
-    border-radius: 20px 20px 5px 20px;
-    text-align: center;
-    padding: 8px 15px;
-    font-size: 22px;
-    font-family: sans-serif;
-}
-
-.significado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.sobre-setembro{
-    background-color: #f2b90c;
-    padding: 12px 20px;
-    margin: 20px 0;
-    border-radius: 20px;
-}
-
-.sobre-setembro p{
-    color: #000;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px
-}
-
-.precisar{
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-}
-
-.precisar h2{
-    font-size: 16px;
-}
-
-.precisar p{
-    font-size: 18px;
-}
-
-.precisar h3{
-    font-size: 13px;
-}
-
-.dark-mode .precisar{
-    color: #fff;
-}
-
-.desenvolvedores{
-    font-family: "Poppins", sans-serif;
-    padding: 10px 0;
-}
-
-.desenvolvedores h2{
-    font-size: 18px;
-}
-
-.desenvolvedores p{
-    text-align: center;
-    font-size: 15px;
-}
-
-.desenvolvedores a{
+    flex-direction: column;
     text-decoration: none;
-    list-style-type: none;
-    color: #000;
 }
 
-.logo-pao{
+
+/* OUTUBRO ROSA */
+
+.background-geral-2{
+    /* margin-top: 10em; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-radius: 20px;
-    margin: 20px 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--rosa);
 }
 
-.dark-mode .titulos-footer {
-    color: #fff;
+.set-2{
+    color: var(--rosa);
 }
 
-.dark-mode .desenvolvedores{
-    color: #fff;
+/* Novembro azul*/
+
+.background-geral-3{
+    /* margin-top: 10em; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--azul);
 }
 
-.dark-mode .desenvolvedores h2{
-    color: #fff;
+.set-3{
+    color: var(--azul);
 }
-
-
-
-
