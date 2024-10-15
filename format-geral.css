@@ -54,9 +54,10 @@ html {
 
 
 .logo-img img{
-    width: 10%;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    margin-left: -50%;
+    margin-left: -45%;
     border-radius: 30%;
     box-shadow: 0 10px 30px var(--amarelo-dark);
     z-index: 1;
@@ -66,8 +67,10 @@ html {
 }
 
 .logo-img img:hover{
-    width: 20%;
+    width: 170px;
+
 }
+
 
 /* CABEÇALHO NAVBAR*/
 
@@ -123,6 +126,7 @@ header{
 
 /* FIM ANIMAÇÃO NAVBAR TEXTO */
 /* --------FINAL BOTÃO NAVBAR */
+
 
 /* -----drop down----- */
 
@@ -180,6 +184,7 @@ header{
     background-color: rgb(245, 243, 235); /* Cor de fundo ao passar o mouse */
     color: #888602; /* Cor do texto ao passar o mouse */
   }
+
 
 
 /* MENU MOBILE */
@@ -310,18 +315,18 @@ display: none;
 /* LOGO */
 .logo-img img{
     width: 35%;
-    margin-left: -35%;
+    /* margin-left: -60%; */
 }
 
 .logo-img img:hover{
-    width: 30%;
+    width: 40%;
 
 }
 
-     .dropdown{
-       visibility: hidden;
-       margin-left: -2em;
-    }
+.dropdown{
+    visibility: hidden;
+    margin-left: -2em;
+ }
 }
 
 
